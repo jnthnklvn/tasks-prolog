@@ -1,11 +1,11 @@
-vitoria([XY,XY,XY,_,_,_,_,_,_],XY).
-vitoria([_,_,_,XY,XY,XY,_,_,_],XY).
-vitoria([_,_,_,_,_,_,XY,XY,XY],XY).
-vitoria([XY,_,_,XY,_,_,XY,_,_],XY).
-vitoria([_,XY,_,_,XY,_,_,XY,_],XY).
-vitoria([_,_,XY,_,_,XY,_,_,XY],XY).
-vitoria([XY,_,_,_,XY,_,_,_,XY],XY).
-vitoria([_,_,XY,_,XY,_,XY,_,_],XY).
+vitoria(L,XY):- L = [XY,XY,XY,_,_,_,_,_,_];
+                L = [_,_,_,XY,XY,XY,_,_,_];
+                L = [_,_,_,_,_,_,XY,XY,XY];
+                L = [XY,_,_,XY,_,_,XY,_,_];
+                L = [_,XY,_,_,XY,_,_,XY,_];
+                L = [_,_,XY,_,_,XY,_,_,XY];
+                L = [XY,_,_,_,XY,_,_,_,XY];
+                L = [_,_,XY,_,XY,_,XY,_,_].
 
 moverIA([A,B,C,D,a,F,G,H,I], XY, [A,B,C,D,XY,F,G,H,I]).
 moverIA([x,a,a,D,E,F,a,H,x], XY, [x,XY,a,D,E,F,a,H,x]).
@@ -51,9 +51,9 @@ iniciar(L) :- not(member(a,L)), write('Empatou!').
 iniciar(L) :- read(N),
   moverJ(L, N, NL),
   disp(NL),
-  oplay(NL, NnewL),
-  disp(NnewL),
-  iniciar(NnewL).
+  oplay(NL, NnL),
+  disp(NnL),
+  iniciar(NnL).
 
 venceJ(L) :- moverIA(L, x, NL), vitoria(NL, x).
 
