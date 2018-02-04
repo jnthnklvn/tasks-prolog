@@ -41,7 +41,7 @@ disp([A,B,C,D,E,F,G,H,I]) :-
 main :- inicio, iniciar([a,a,a,a,a,a,a,a,a]).
 
 inicio :-
-  write('Você joga com x, digite a posição que quer jogar.'),
+  write('Voce joga com x, digite a posicao que quer jogar.'),
   nl,
   disp([1,2,3,4,5,6,7,8,9]).
 
