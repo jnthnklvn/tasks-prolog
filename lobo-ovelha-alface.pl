@@ -19,8 +19,8 @@ atravessa([X,Y], [ovelha], [Y], [X,ovelha], S, [X|S]).
 atravessa([X,Y], [ovelha], [X], [Y,ovelha], S, [Y|S]).
 %% Se só sobrou a ovelha no lado1, levamos ela.
 atravessa([ovelha], [Y,Z], [], [ovelha,Y,Z], S, [ovelha|S]).
-%% A solucao eh encontrada quando o lado1 estah vazio
 
+%% A solucao eh encontrada quando o lado1 estah vazio.
 solucao([],_,S,S).
 solucao(Lado1, Lado2, S, NSolucao) :- 
 	atravessa(Lado1, Lado2, NLado1, NLado2, S, Solucao),
