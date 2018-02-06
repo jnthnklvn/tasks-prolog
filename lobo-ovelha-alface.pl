@@ -14,7 +14,7 @@ atravessa([X], [ovelha,Z], [X,ovelha], [Z], S, [ovelha|S]).
 %% Se a ovelha estah no lado1 com 1 acompanhante, levamos ele.
 atravessa([X,ovelha], [Z], [ovelha], [X,Z], S, [X|S]).
 atravessa([ovelha,Y], [Z], [ovelha], [Y,Z], S, [Y|S]).
-%% Se soh a ovelha estah no lado2, levamos qualquer um pra lah.
+%% Se soh a ovelha estah no lado2, levamos qualquer um.
 atravessa([X,Y], [ovelha], [Y], [X,ovelha], S, [X|S]).
 atravessa([X,Y], [ovelha], [X], [Y,ovelha], S, [Y|S]).
 %% Se só sobrou a ovelha no lado1, levamos ela.
