@@ -1,0 +1,410 @@
+node n1 {
+    type router
+    model router
+    network-config {
+	hostname n1
+	!
+    }
+    canvas c1
+    iconcoords {491.0 321.0}
+    labelcoords {491.0 353.0}
+}
+
+node n2 {
+    type router
+    model router
+    network-config {
+	hostname Juridico
+	!
+    }
+    canvas c1
+    iconcoords {154.0 318.0}
+    labelcoords {154.0 350.0}
+}
+
+node n3 {
+    type router
+    model router
+    network-config {
+	hostname n3
+	!
+    }
+    canvas c1
+    iconcoords {766.0 323.0}
+    labelcoords {766.0 355.0}
+}
+
+node n4 {
+    type lanswitch
+    network-config {
+	hostname n4
+	!
+    }
+    canvas c1
+    iconcoords {896.0 325.0}
+    labelcoords {896.0 349.0}
+}
+
+node n5 {
+    type router
+    model PC
+    network-config {
+	hostname n5
+	!
+    }
+    canvas c1
+    iconcoords {75.0 495.0}
+    labelcoords {75.0 527.0}
+}
+
+node n6 {
+    type router
+    model PC
+    network-config {
+	hostname n6
+	!
+    }
+    canvas c1
+    iconcoords {139.0 496.0}
+    labelcoords {139.0 528.0}
+}
+
+node n7 {
+    type router
+    model PC
+    network-config {
+	hostname n7
+	!
+    }
+    canvas c1
+    iconcoords {204.0 497.0}
+    labelcoords {204.0 529.0}
+}
+
+node n8 {
+    type router
+    model PC
+    network-config {
+	hostname n8
+	!
+    }
+    canvas c1
+    iconcoords {260.0 494.0}
+    labelcoords {260.0 526.0}
+}
+
+node n9 {
+    type router
+    model PC
+    network-config {
+	hostname n9
+	!
+    }
+    canvas c1
+    iconcoords {312.0 495.0}
+    labelcoords {312.0 527.0}
+}
+
+node n10 {
+    type router
+    model PC
+    network-config {
+	hostname n10
+	!
+    }
+    canvas c1
+    iconcoords {416.0 501.0}
+    labelcoords {416.0 533.0}
+}
+
+node n11 {
+    type router
+    model PC
+    network-config {
+	hostname n11
+	!
+    }
+    canvas c1
+    iconcoords {473.0 509.0}
+    labelcoords {473.0 541.0}
+}
+
+node n12 {
+    type router
+    model PC
+    network-config {
+	hostname n12
+	!
+    }
+    canvas c1
+    iconcoords {527.0 506.0}
+    labelcoords {527.0 538.0}
+}
+
+node n13 {
+    type router
+    model PC
+    network-config {
+	hostname n13
+	!
+    }
+    canvas c1
+    iconcoords {568.0 509.0}
+    labelcoords {568.0 541.0}
+}
+
+node n14 {
+    type router
+    model PC
+    network-config {
+	hostname n14
+	!
+    }
+    canvas c1
+    iconcoords {604.0 506.0}
+    labelcoords {604.0 538.0}
+}
+
+node n15 {
+    type router
+    model PC
+    network-config {
+	hostname n15
+	!
+    }
+    canvas c1
+    iconcoords {66.0 164.0}
+    labelcoords {66.0 196.0}
+}
+
+node n16 {
+    type router
+    model PC
+    network-config {
+	hostname n16
+	!
+    }
+    canvas c1
+    iconcoords {115.0 174.0}
+    labelcoords {115.0 206.0}
+}
+
+node n17 {
+    type router
+    model PC
+    network-config {
+	hostname n17
+	!
+    }
+    canvas c1
+    iconcoords {164.0 168.0}
+    labelcoords {164.0 200.0}
+}
+
+node n18 {
+    type router
+    model PC
+    network-config {
+	hostname n18
+	!
+    }
+    canvas c1
+    iconcoords {217.0 171.0}
+    labelcoords {217.0 203.0}
+}
+
+node n19 {
+    type router
+    model PC
+    network-config {
+	hostname n19
+	!
+    }
+    canvas c1
+    iconcoords {275.0 172.0}
+    labelcoords {275.0 204.0}
+}
+
+node n20 {
+    type router
+    model PC
+    network-config {
+	hostname n20
+	!
+    }
+    canvas c1
+    iconcoords {380.0 175.0}
+    labelcoords {380.0 207.0}
+}
+
+node n21 {
+    type router
+    model PC
+    network-config {
+	hostname n21
+	!
+    }
+    canvas c1
+    iconcoords {408.0 173.0}
+    labelcoords {408.0 205.0}
+}
+
+node n22 {
+    type router
+    model PC
+    network-config {
+	hostname n22
+	!
+    }
+    canvas c1
+    iconcoords {458.0 179.0}
+    labelcoords {458.0 211.0}
+}
+
+node n23 {
+    type router
+    model PC
+    network-config {
+	hostname n23
+	!
+    }
+    canvas c1
+    iconcoords {499.0 179.0}
+    labelcoords {499.0 211.0}
+}
+
+node n24 {
+    type router
+    model PC
+    network-config {
+	hostname n24
+	!
+    }
+    canvas c1
+    iconcoords {550.0 181.0}
+    labelcoords {550.0 213.0}
+}
+
+node n25 {
+    type router
+    model PC
+    network-config {
+	hostname n25
+	!
+    }
+    canvas c1
+    iconcoords {697.0 176.0}
+    labelcoords {697.0 208.0}
+}
+
+node n26 {
+    type router
+    model PC
+    network-config {
+	hostname n26
+	!
+    }
+    canvas c1
+    iconcoords {740.0 177.0}
+    labelcoords {740.0 209.0}
+}
+
+node n27 {
+    type router
+    model PC
+    network-config {
+	hostname n27
+	!
+    }
+    canvas c1
+    iconcoords {793.0 177.0}
+    labelcoords {793.0 209.0}
+}
+
+node n28 {
+    type router
+    model PC
+    network-config {
+	hostname n28
+	!
+    }
+    canvas c1
+    iconcoords {831.0 181.0}
+    labelcoords {831.0 213.0}
+}
+
+node n29 {
+    type router
+    model PC
+    network-config {
+	hostname n29
+	!
+    }
+    canvas c1
+    iconcoords {873.0 185.0}
+    labelcoords {873.0 217.0}
+}
+
+node n30 {
+    type router
+    model PC
+    network-config {
+	hostname n30
+	!
+    }
+    canvas c1
+    iconcoords {918.0 185.0}
+    labelcoords {918.0 217.0}
+}
+
+annotation a1 {
+    iconcoords {341 128 660 530}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #ff8c44
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a2 {
+    iconcoords {468.0 138.0}
+    type text
+    label {Orange}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a3 {
+    type text
+    iconcoords {477.0 144.0}
+    label {}
+    canvas c1
+}
+
+canvas c1 {
+    name {Canvas1}
+}
+
+option global {
+    interface_names no
+    ip_addresses yes
+    ipv6_addresses yes
+    node_labels yes
+    link_labels yes
+    show_api no
+    background_images no
+    annotations yes
+    grid yes
+    traffic_start 0
+}
+
+option session {
+}
+
