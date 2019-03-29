@@ -285,7 +285,7 @@ node n2 {
 	;;.                        3600000      NS    B.ROOT-SERVERS.NET.
 	;;B.ROOT-SERVERS.NET.      3600000      A     192.228.79.201
 	;
-	; FORMERLY C.COM.NET
+	; FORMERLY C.PSI.NET
 	;
 	;;.                        3600000      NS    C.ROOT-SERVERS.NET.
 	;;C.ROOT-SERVERS.NET.      3600000      A     192.33.4.12
@@ -1491,7 +1491,7 @@ node n5 {
 	;;e.ip6-servers.arpa.	86400	IN	AAAA	2001:dc0:2001:a:4608::59
 	;;f.ip6-servers.arpa.	86400	IN	A	193.0.9.2
 	;;f.ip6-servers.arpa.	86400	IN	AAAA	2001:67c:e0::2
-	a.b.e.b.8.b.d.0.1.0.0.2			86400	IN	NS	ns.orangesoftware.com.br.
+	a.b.e.b.8.b.d.0.1.0.0.2			86400	IN	NS	ns.exemplo.psi.br.
 	
 	}
     }
@@ -1518,7 +1518,7 @@ node n5 {
 	;;e.in-addr-servers.arpa.	86400	IN	AAAA	2001:dd8:6::101
 	;;f.in-addr-servers.arpa.	86400	IN	A	193.0.9.1
 	;;f.in-addr-servers.arpa.	86400	IN	AAAA	2001:67c:e0::1
-	113.0.203			86400	IN	NS	ns.orangesoftware.com.br.
+	113.0.203			86400	IN	NS	ns.exemplo.psi.br.
 	
 	}
     }
@@ -1630,7 +1630,7 @@ node n5 {
 	.                        3600000      NS    B.ROOT-SERVERS.NET.
 	B.ROOT-SERVERS.NET.      3600000      A     192.228.79.201
 	;
-	; FORMERLY C.COM.NET
+	; FORMERLY C.PSI.NET
 	;
 	.                        3600000      NS    C.ROOT-SERVERS.NET.
 	C.ROOT-SERVERS.NET.      3600000      A     192.33.4.12
@@ -1874,7 +1874,7 @@ node n6 {
 	custom-command UserDefined
 	config {
 	dirs=('/etc/bind', '/var/cache/bind', )
-	files=('/etc/bind/named.conf', '/etc/bind/named.conf.options', '/etc/bind/named.conf.local', '/etc/bind/zones.rfc1918', '/etc/bind/db.empty', '/etc/bind/named.conf.default-zones', '/etc/bind/db.root', '/etc/bind/db.local', '/etc/bind/db.127', '/etc/bind/db.0', '/etc/bind/db.255', '/etc/bind/br.zone', '/etc/bind/adm.br.zone', '/etc/bind/adv.br.zone', '/etc/bind/agr.br.zone', '/etc/bind/am.br.zone', '/etc/bind/arq.br.zone', '/etc/bind/art.br.zone', '/etc/bind/ato.br.zone', '/etc/bind/b.br.zone', '/etc/bind/bio.br.zone', '/etc/bind/blog.br.zone', '/etc/bind/bmd.br.zone', '/etc/bind/cim.br.zone', '/etc/bind/cng.br.zone', '/etc/bind/cnt.br.zone', '/etc/bind/com.br.zone', '/etc/bind/coop.br.zone', '/etc/bind/ecn.br.zone', '/etc/bind/eco.br.zone', '/etc/bind/emp.br.zone', '/etc/bind/eng.br.zone', '/etc/bind/esp.br.zone', '/etc/bind/etc.br.zone', '/etc/bind/eti.br.zone', '/etc/bind/far.br.zone', '/etc/bind/flog.br.zone', '/etc/bind/fm.br.zone', '/etc/bind/fnd.br.zone', '/etc/bind/fot.br.zone', '/etc/bind/fst.br.zone', '/etc/bind/g12.br.zone', '/etc/bind/ggf.br.zone', '/etc/bind/imb.br.zone', '/etc/bind/ind.br.zone', '/etc/bind/inf.br.zone', '/etc/bind/jor.br.zone', '/etc/bind/jus.br.zone', '/etc/bind/leg.br.zone', '/etc/bind/lel.br.zone', '/etc/bind/mat.br.zone', '/etc/bind/med.br.zone', '/etc/bind/mil.br.zone', '/etc/bind/mp.br.zone', '/etc/bind/mus.br.zone', '/etc/bind/net.br.zone', '/etc/bind/nom.br.zone', '/etc/bind/not.br.zone', '/etc/bind/ntr.br.zone', '/etc/bind/odo.br.zone', '/etc/bind/org.br.zone', '/etc/bind/ppg.br.zone', '/etc/bind/pro.br.zone', '/etc/bind/psc.br.zone', '/etc/bind/com.br.zone', '/etc/bind/qsl.br.zone', '/etc/bind/radio.br.zone', '/etc/bind/rec.br.zone', '/etc/bind/slg.br.zone', '/etc/bind/srv.br.zone', '/etc/bind/taxi.br.zone', '/etc/bind/teo.br.zone', '/etc/bind/tmp.br.zone', '/etc/bind/trd.br.zone', '/etc/bind/tur.br.zone', '/etc/bind/tv.br.zone', '/etc/bind/vet.br.zone', '/etc/bind/vlog.br.zone', '/etc/bind/wiki.br.zone', '/etc/bind/zlg.br.zone', )
+	files=('/etc/bind/named.conf', '/etc/bind/named.conf.options', '/etc/bind/named.conf.local', '/etc/bind/zones.rfc1918', '/etc/bind/db.empty', '/etc/bind/named.conf.default-zones', '/etc/bind/db.root', '/etc/bind/db.local', '/etc/bind/db.127', '/etc/bind/db.0', '/etc/bind/db.255', '/etc/bind/br.zone', '/etc/bind/adm.br.zone', '/etc/bind/adv.br.zone', '/etc/bind/agr.br.zone', '/etc/bind/am.br.zone', '/etc/bind/arq.br.zone', '/etc/bind/art.br.zone', '/etc/bind/ato.br.zone', '/etc/bind/b.br.zone', '/etc/bind/bio.br.zone', '/etc/bind/blog.br.zone', '/etc/bind/bmd.br.zone', '/etc/bind/cim.br.zone', '/etc/bind/cng.br.zone', '/etc/bind/cnt.br.zone', '/etc/bind/com.br.zone', '/etc/bind/coop.br.zone', '/etc/bind/ecn.br.zone', '/etc/bind/eco.br.zone', '/etc/bind/emp.br.zone', '/etc/bind/eng.br.zone', '/etc/bind/esp.br.zone', '/etc/bind/etc.br.zone', '/etc/bind/eti.br.zone', '/etc/bind/far.br.zone', '/etc/bind/flog.br.zone', '/etc/bind/fm.br.zone', '/etc/bind/fnd.br.zone', '/etc/bind/fot.br.zone', '/etc/bind/fst.br.zone', '/etc/bind/g12.br.zone', '/etc/bind/ggf.br.zone', '/etc/bind/imb.br.zone', '/etc/bind/ind.br.zone', '/etc/bind/inf.br.zone', '/etc/bind/jor.br.zone', '/etc/bind/jus.br.zone', '/etc/bind/leg.br.zone', '/etc/bind/lel.br.zone', '/etc/bind/mat.br.zone', '/etc/bind/med.br.zone', '/etc/bind/mil.br.zone', '/etc/bind/mp.br.zone', '/etc/bind/mus.br.zone', '/etc/bind/net.br.zone', '/etc/bind/nom.br.zone', '/etc/bind/not.br.zone', '/etc/bind/ntr.br.zone', '/etc/bind/odo.br.zone', '/etc/bind/org.br.zone', '/etc/bind/ppg.br.zone', '/etc/bind/pro.br.zone', '/etc/bind/psc.br.zone', '/etc/bind/psi.br.zone', '/etc/bind/qsl.br.zone', '/etc/bind/radio.br.zone', '/etc/bind/rec.br.zone', '/etc/bind/slg.br.zone', '/etc/bind/srv.br.zone', '/etc/bind/taxi.br.zone', '/etc/bind/teo.br.zone', '/etc/bind/tmp.br.zone', '/etc/bind/trd.br.zone', '/etc/bind/tur.br.zone', '/etc/bind/tv.br.zone', '/etc/bind/vet.br.zone', '/etc/bind/vlog.br.zone', '/etc/bind/wiki.br.zone', '/etc/bind/zlg.br.zone', )
 	cmdup=('/etc/init.d/bind9 start', )
 	cmddown=('/etc/init.d/bind9 stop', )
 	}
@@ -2255,16 +2255,16 @@ node n6 {
 	}
     }
     custom-config {
-	custom-config-id service:UserDefined:/etc/bind/com.br.zone
-	custom-command /etc/bind/com.br.zone
+	custom-config-id service:UserDefined:/etc/bind/psi.br.zone
+	custom-command /etc/bind/psi.br.zone
 	config {
-	com.br.			172800	IN	SOA	a.dns.br. hostmaster.registro.br. 2013022890 1800 900 604800 900
-	com.br.			172800	IN	NS	a.dns.br.
-	com.br.			172800	IN	NS	b.dns.br.
-	com.br.			172800	IN	NS	c.dns.br.
-	com.br.			172800	IN	NS	d.dns.br.
-	com.br.			172800	IN	NS	e.dns.br.
-	com.br.			172800	IN	NS	f.dns.br.
+	psi.br.			172800	IN	SOA	a.dns.br. hostmaster.registro.br. 2013022890 1800 900 604800 900
+	psi.br.			172800	IN	NS	a.dns.br.
+	psi.br.			172800	IN	NS	b.dns.br.
+	psi.br.			172800	IN	NS	c.dns.br.
+	psi.br.			172800	IN	NS	d.dns.br.
+	psi.br.			172800	IN	NS	e.dns.br.
+	psi.br.			172800	IN	NS	f.dns.br.
 	a.dns.br.		172800	IN	A	200.160.0.10
 	a.dns.br.		172800	IN	AAAA	2001:12ff:0:0:0:0:0:10
 	b.dns.br.		172800	IN	A	200.189.41.10
@@ -2276,9 +2276,9 @@ node n6 {
 	f.dns.br.		172800	IN	A	200.219.159.10
 	ns.dns.br.		172800	IN	A	200.160.0.5
 	ns.dns.br.		172800	IN	AAAA	2001:12ff:0:a20:0:0:0:5
-	orangesoftware		172800	IN	NS	ns.orangesoftware.com.br.
-	ns.orangesoftware		172800	IN	A	203.0.113.2
-	ns.orangesoftware		172800	IN	AAAA	2001:db8:beba:cafe:0:0:0:2
+	exemplo		172800	IN	NS	ns.exemplo.psi.br.
+	ns.exemplo		172800	IN	A	203.0.113.2
+	ns.exemplo		172800	IN	AAAA	2001:db8:beba:cafe:0:0:0:2
 	
 	}
     }
@@ -3715,7 +3715,7 @@ node n6 {
 	.                        3600000      NS    B.ROOT-SERVERS.NET.
 	B.ROOT-SERVERS.NET.      3600000      A     192.228.79.201
 	;
-	; FORMERLY C.COM.NET
+	; FORMERLY C.PSI.NET
 	;
 	.                        3600000      NS    C.ROOT-SERVERS.NET.
 	C.ROOT-SERVERS.NET.      3600000      A     192.33.4.12
@@ -3928,7 +3928,7 @@ node n6 {
 	zone "ppg.br"   { type master; file "/etc/bind/ppg.br.zone"; };
 	zone "pro.br"   { type master; file "/etc/bind/pro.br.zone"; };
 	zone "psc.br"   { type master; file "/etc/bind/psc.br.zone"; };
-	zone "com.br"   { type master; file "/etc/bind/com.br.zone"; };
+	zone "psi.br"   { type master; file "/etc/bind/psi.br.zone"; };
 	zone "qsl.br"   { type master; file "/etc/bind/qsl.br.zone"; };
 	zone "radio.br" { type master; file "/etc/bind/radio.br.zone"; };
 	zone "rec.br"   { type master; file "/etc/bind/rec.br.zone"; };
@@ -4080,7 +4080,7 @@ node n8 {
 	custom-command UserDefined
 	config {
 	dirs=('/etc/bind', '/var/cache/bind', )
-	files=('/etc/bind/named.conf', '/etc/bind/orangesoftware.com.br.zone', '/etc/bind/203.0.113.db', '/etc/bind/2001-db8-beba.db', )
+	files=('/etc/bind/named.conf', '/etc/bind/exemplo.psi.br.zone', '/etc/bind/203.0.113.db', '/etc/bind/2001-db8-beba.db', )
 	cmdup=('named -c /etc/bind/named.conf', )
 	}
     }
@@ -4088,16 +4088,16 @@ node n8 {
 	custom-config-id service:UserDefined:/etc/bind/2001-db8-beba.db
 	custom-command /etc/bind/2001-db8-beba.db
 	config {
-	a.b.e.b.8.b.d.0.1.0.0.2.ip6.arpa. 86400 IN SOA ns.orangesoftware.com.br. ipv6.nic.br. (
+	a.b.e.b.8.b.d.0.1.0.0.2.ip6.arpa. 86400 IN SOA ns.exemplo.psi.br. ipv6.nic.br. (
 	                                            2013022890 86400 3600 604800 86400 )
-	                                  86400 IN NS ns.orangesoftware.com.br.
+	                                  86400 IN NS ns.exemplo.psi.br.
 	;; DNS server
-	2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR ns.orangesoftware.com.br.
+	2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR ns.exemplo.psi.br.
 	;; WWW server
 	;; SSH server
-	0.0.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR www.orangesoftware.com.br.
+	0.0.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR www.exemplo.psi.br.
 	;; Mail server
-	0.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR mail.orangesoftware.com.br.
+	0.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR mail.exemplo.psi.br.
 	
 	}
     }
@@ -4105,37 +4105,37 @@ node n8 {
 	custom-config-id service:UserDefined:/etc/bind/203.0.113.db
 	custom-command /etc/bind/203.0.113.db
 	config {
-	113.0.203.in-addr.arpa. 86400 IN SOA ns.orangesoftware.com.br. ipv6.nic.br. (
+	113.0.203.in-addr.arpa. 86400 IN SOA ns.exemplo.psi.br. ipv6.nic.br. (
 	                                  2013022890 86400 3600 604800 86400 )
-	                86400 IN NS ns.orangesoftware.com.br.
+	                86400 IN NS ns.exemplo.psi.br.
 	;; DNS server
-	2               86400 IN PTR ns.orangesoftware.com.br.
+	2               86400 IN PTR ns.exemplo.psi.br.
 	;; WWW server
-	200             86400 IN PTR www.orangesoftware.com.br.
+	200             86400 IN PTR www.exemplo.psi.br.
 	;; Mail server
-	220             86400 IN PTR mail.orangesoftware.com.br.
+	220             86400 IN PTR mail.exemplo.psi.br.
 	
 	}
     }
     custom-config {
-	custom-config-id service:UserDefined:/etc/bind/orangesoftware.com.br.zone
-	custom-command /etc/bind/orangesoftware.com.br.zone
+	custom-config-id service:UserDefined:/etc/bind/exemplo.psi.br.zone
+	custom-command /etc/bind/exemplo.psi.br.zone
 	config {
-	orangesoftware.com.br.	30 IN SOA ns.orangesoftware.com.br. ipv6.nic.br. (
+	exemplo.psi.br.	30 IN SOA ns.exemplo.psi.br. ipv6.nic.br. (
 	                            2013022890 1800 900 604800 60 )
-	                30 IN NS ns.orangesoftware.com.br.
+	                30 IN NS ns.exemplo.psi.br.
 	;; DNS server
 	ns              30 IN A 203.0.113.2
 	;; WWW server
 	www             30 IN A 203.0.113.200
 	;; Mail server
-	orangesoftware.com.br. 30 IN MX 10 mail.orangesoftware.com.br.
+	exemplo.psi.br. 30 IN MX 10 mail.exemplo.psi.br.
 	mail            30 IN A  203.0.113.220
 	;; SPF policy
 	                30 IN TXT "v=spf1 a mx ip4:203.0.113.220 -all"
 	                30 IN SPF "v=spf1 a mx ip4:203.0.113.220 -all"
 	;; SSH server
-	ssh             30 IN CNAME www.orangesoftware.com.br.
+	ssh             30 IN CNAME www.exemplo.psi.br.
 	
 	}
     }
@@ -4149,9 +4149,9 @@ node n8 {
 	  recursion no;
 	};
 	
-	zone "orangesoftware.com.br" {
+	zone "exemplo.psi.br" {
 	  type master;
-	  file "/etc/bind/orangesoftware.com.br.zone";
+	  file "/etc/bind/exemplo.psi.br.zone";
 	};
 	zone "113.0.203.in-addr.arpa" {
 	  type master;
@@ -4357,7 +4357,7 @@ annotation a2 {
 annotation a3 {
     iconcoords {505.0 74.0 959.0 355.0}
     type rectangle
-    label {orangesoftware.com.br}
+    label {exemplo.psi.br}
     labelcolor black
     fontfamily {Arial}
     fontsize {12}
