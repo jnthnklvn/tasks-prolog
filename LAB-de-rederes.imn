@@ -1491,7 +1491,7 @@ node n5 {
 	;;e.ip6-servers.arpa.	86400	IN	AAAA	2001:dc0:2001:a:4608::59
 	;;f.ip6-servers.arpa.	86400	IN	A	193.0.9.2
 	;;f.ip6-servers.arpa.	86400	IN	AAAA	2001:67c:e0::2
-	a.b.e.b.8.b.d.0.1.0.0.2			86400	IN	NS	ns.exemplo.psi.br.
+	a.b.e.b.8.b.d.0.1.0.0.2			86400	IN	NS	ns.orangesoftware.psi.br.
 	
 	}
     }
@@ -1518,7 +1518,7 @@ node n5 {
 	;;e.in-addr-servers.arpa.	86400	IN	AAAA	2001:dd8:6::101
 	;;f.in-addr-servers.arpa.	86400	IN	A	193.0.9.1
 	;;f.in-addr-servers.arpa.	86400	IN	AAAA	2001:67c:e0::1
-	113.0.203			86400	IN	NS	ns.exemplo.psi.br.
+	113.0.203			86400	IN	NS	ns.orangesoftware.psi.br.
 	
 	}
     }
@@ -2276,9 +2276,9 @@ node n6 {
 	f.dns.br.		172800	IN	A	200.219.159.10
 	ns.dns.br.		172800	IN	A	200.160.0.5
 	ns.dns.br.		172800	IN	AAAA	2001:12ff:0:a20:0:0:0:5
-	exemplo		172800	IN	NS	ns.exemplo.psi.br.
-	ns.exemplo		172800	IN	A	203.0.113.2
-	ns.exemplo		172800	IN	AAAA	2001:db8:beba:cafe:0:0:0:2
+	orangesoftware		172800	IN	NS	ns.orangesoftware.psi.br.
+	ns.orangesoftware		172800	IN	A	203.0.113.2
+	ns.orangesoftware		172800	IN	AAAA	2001:db8:beba:cafe:0:0:0:2
 	
 	}
     }
@@ -4064,7 +4064,7 @@ node n8 {
     type router
     model host
     network-config {
-	hostname n8AuthoritativeExemplo
+	hostname n8AuthoritativeOrangeSoftware
 	!
 	interface eth0
 	 ipv6 address 2001:db8:beba:cafe::2/64
@@ -4080,7 +4080,7 @@ node n8 {
 	custom-command UserDefined
 	config {
 	dirs=('/etc/bind', '/var/cache/bind', )
-	files=('/etc/bind/named.conf', '/etc/bind/exemplo.psi.br.zone', '/etc/bind/203.0.113.db', '/etc/bind/2001-db8-beba.db', )
+	files=('/etc/bind/named.conf', '/etc/bind/orangesoftware.psi.br.zone', '/etc/bind/203.0.113.db', '/etc/bind/2001-db8-beba.db', )
 	cmdup=('named -c /etc/bind/named.conf', )
 	}
     }
@@ -4088,16 +4088,16 @@ node n8 {
 	custom-config-id service:UserDefined:/etc/bind/2001-db8-beba.db
 	custom-command /etc/bind/2001-db8-beba.db
 	config {
-	a.b.e.b.8.b.d.0.1.0.0.2.ip6.arpa. 86400 IN SOA ns.exemplo.psi.br. ipv6.nic.br. (
+	a.b.e.b.8.b.d.0.1.0.0.2.ip6.arpa. 86400 IN SOA ns.orangesoftware.psi.br. ipv6.nic.br. (
 	                                            2013022890 86400 3600 604800 86400 )
-	                                  86400 IN NS ns.exemplo.psi.br.
+	                                  86400 IN NS ns.orangesoftware.psi.br.
 	;; DNS server
-	2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR ns.exemplo.psi.br.
+	2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR ns.orangesoftware.psi.br.
 	;; WWW server
 	;; SSH server
-	0.0.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR www.exemplo.psi.br.
+	0.0.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR www.orangesoftware.psi.br.
 	;; Mail server
-	0.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR mail.exemplo.psi.br.
+	0.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.e.f.a.c 86400 IN PTR mail.orangesoftware.psi.br.
 	
 	}
     }
@@ -4105,37 +4105,37 @@ node n8 {
 	custom-config-id service:UserDefined:/etc/bind/203.0.113.db
 	custom-command /etc/bind/203.0.113.db
 	config {
-	113.0.203.in-addr.arpa. 86400 IN SOA ns.exemplo.psi.br. ipv6.nic.br. (
+	113.0.203.in-addr.arpa. 86400 IN SOA ns.orangesoftware.psi.br. ipv6.nic.br. (
 	                                  2013022890 86400 3600 604800 86400 )
-	                86400 IN NS ns.exemplo.psi.br.
+	                86400 IN NS ns.orangesoftware.psi.br.
 	;; DNS server
-	2               86400 IN PTR ns.exemplo.psi.br.
+	2               86400 IN PTR ns.orangesoftware.psi.br.
 	;; WWW server
-	200             86400 IN PTR www.exemplo.psi.br.
+	200             86400 IN PTR www.orangesoftware.psi.br.
 	;; Mail server
-	220             86400 IN PTR mail.exemplo.psi.br.
+	220             86400 IN PTR mail.orangesoftware.psi.br.
 	
 	}
     }
     custom-config {
-	custom-config-id service:UserDefined:/etc/bind/exemplo.psi.br.zone
-	custom-command /etc/bind/exemplo.psi.br.zone
+	custom-config-id service:UserDefined:/etc/bind/orangesoftware.psi.br.zone
+	custom-command /etc/bind/orangesoftware.psi.br.zone
 	config {
-	exemplo.psi.br.	30 IN SOA ns.exemplo.psi.br. ipv6.nic.br. (
+	orangesoftware.psi.br.	30 IN SOA ns.orangesoftware.psi.br. ipv6.nic.br. (
 	                            2013022890 1800 900 604800 60 )
-	                30 IN NS ns.exemplo.psi.br.
+	                30 IN NS ns.orangesoftware.psi.br.
 	;; DNS server
 	ns              30 IN A 203.0.113.2
 	;; WWW server
 	www             30 IN A 203.0.113.200
 	;; Mail server
-	exemplo.psi.br. 30 IN MX 10 mail.exemplo.psi.br.
+	orangesoftware.psi.br. 30 IN MX 10 mail.orangesoftware.psi.br.
 	mail            30 IN A  203.0.113.220
 	;; SPF policy
 	                30 IN TXT "v=spf1 a mx ip4:203.0.113.220 -all"
 	                30 IN SPF "v=spf1 a mx ip4:203.0.113.220 -all"
 	;; SSH server
-	ssh             30 IN CNAME www.exemplo.psi.br.
+	ssh             30 IN CNAME www.orangesoftware.psi.br.
 	
 	}
     }
@@ -4149,9 +4149,9 @@ node n8 {
 	  recursion no;
 	};
 	
-	zone "exemplo.psi.br" {
+	zone "orangesoftware.psi.br" {
 	  type master;
-	  file "/etc/bind/exemplo.psi.br.zone";
+	  file "/etc/bind/orangesoftware.psi.br.zone";
 	};
 	zone "113.0.203.in-addr.arpa" {
 	  type master;
@@ -4167,7 +4167,7 @@ node n9 {
     type router
     model host
     network-config {
-	hostname n9WWWExemplo
+	hostname n9WWWOrangeSoftware
 	!
 	interface eth0
 	 ip address 203.0.113.200/24
@@ -4194,7 +4194,7 @@ node n10 {
     type router
     model host
     network-config {
-	hostname n10MailExemplo
+	hostname n10MailOrangeSoftware
 	!
 	interface eth0
 	 ip address 203.0.113.220/24
@@ -4357,7 +4357,7 @@ annotation a2 {
 annotation a3 {
     iconcoords {505.0 74.0 959.0 355.0}
     type rectangle
-    label {exemplo.psi.br}
+    label {orangesoftware.psi.br}
     labelcolor black
     fontfamily {Arial}
     fontsize {12}
