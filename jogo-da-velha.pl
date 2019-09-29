@@ -1,3 +1,4 @@
+%% Todas as possibilidades de vitoria
 vitoria(L,XY):- L = [XY,XY,XY,_,_,_,_,_,_];
                 L = [_,_,_,XY,XY,XY,_,_,_];
                 L = [_,_,_,_,_,_,XY,XY,XY];
@@ -7,64 +8,62 @@ vitoria(L,XY):- L = [XY,XY,XY,_,_,_,_,_,_];
                 L = [XY,_,_,_,XY,_,_,_,XY];
                 L = [_,_,XY,_,XY,_,XY,_,_].
 
-moverIA([A,B,C,D,a,F,G,H,I], XY, [A,B,C,D,XY,F,G,H,I]).
-moverIA([x,a,a,D,E,F,a,H,x], XY, [x,XY,a,D,E,F,a,H,x]).
-moverIA([a,a,x,D,E,F,x,H,a], XY, [a,XY,x,D,E,F,x,H,a]).
-moverIA([x,x,a,D,E,F,a,a,x], XY, [x,x,a,D,E,F,a,XY,x]).
-moverIA([a,x,x,D,E,F,x,a,a], XY, [a,x,x,D,E,F,x,XY,a]).
-moverIA([A,B,C,D,E,F,G,H,a], XY, [A,B,C,D,E,F,G,H,XY]).
-moverIA([A,B,C,D,E,F,a,H,I], XY, [A,B,C,D,E,F,XY,H,I]).
-moverIA([A,B,a,D,E,F,G,H,I], XY, [A,B,XY,D,E,F,G,H,I]).
-moverIA([a,B,C,D,E,F,G,H,I], XY, [XY,B,C,D,E,F,G,H,I]).
-moverIA([A,a,C,D,E,F,G,H,I], XY, [A,XY,C,D,E,F,G,H,I]).
-moverIA([A,B,C,a,E,F,G,H,I], XY, [A,B,C,XY,E,F,G,H,I]).
-moverIA([A,B,C,D,E,a,G,H,I], XY, [A,B,C,D,E,XY,G,H,I]).
-moverIA([A,B,C,D,E,F,G,a,I], XY, [A,B,C,D,E,F,G,XY,I]).
+%% Procura possivel jogada e retorna a posicao dela
+encontrar_jogada([_,_,_,_,a,_,_,_,_], 5).
+encontrar_jogada([_,_,a,_,_,_,_,_,_], 3).
+encontrar_jogada([a,_,_,_,_,_,_,_,_], 1).
+encontrar_jogada([_,_,_,_,_,_,_,_,a], 9).
+encontrar_jogada([_,_,_,_,_,_,a,_,_], 7).
+encontrar_jogada([_,a,_,_,_,_,_,_,_], 2).
+encontrar_jogada([_,_,_,a,_,_,_,_,_], 4).
+encontrar_jogada([_,_,_,_,_,a,_,_,_], 6).
+encontrar_jogada([_,_,_,_,_,_,_,a,_], 8).
 
-moverJ([a,B,C,D,E,F,G,H,I], 1, [x,B,C,D,E,F,G,H,I]).
-moverJ([A,a,C,D,E,F,G,H,I], 2, [A,x,C,D,E,F,G,H,I]).
-moverJ([A,B,a,D,E,F,G,H,I], 3, [A,B,x,D,E,F,G,H,I]).
-moverJ([A,B,C,a,E,F,G,H,I], 4, [A,B,C,x,E,F,G,H,I]).
-moverJ([A,B,C,D,a,F,G,H,I], 5, [A,B,C,D,x,F,G,H,I]).
-moverJ([A,B,C,D,E,a,G,H,I], 6, [A,B,C,D,E,x,G,H,I]).
-moverJ([A,B,C,D,E,F,a,H,I], 7, [A,B,C,D,E,F,x,H,I]).
-moverJ([A,B,C,D,E,F,G,a,I], 8, [A,B,C,D,E,F,G,x,I]).
-moverJ([A,B,C,D,E,F,G,H,a], 9, [A,B,C,D,E,F,G,H,x]).
+%% Verifica se existe possibilidade de vitoria
+vitoriaAgora(Lista, Jogador) :-
+  encontrar_jogada(Lista, Jogada),
+  fazer_jogada(Lista, Jogada, Jogador, NovaLista),
+  vitoria(NovaLista, Jogador).
+vitoriaAntecipada(Lista, Jogador, Oponente) :-
+  encontrar_jogada(Lista, Jogada),
+  fazer_jogada(Lista, Jogada, Jogador, NovaLista),
+  not(vitoriaAgora(NovaLista, Oponente)),
+  count(vitoriaAgora(NovaLista, Jogador), Count),
+  Count = 2,!.
 
-disp([A,B,C,D,E,F,G,H,I]) :-
-	write('|'),
-	write([A,B,C]),write('|'),nl,
-	write('|'),
-	write([D,E,F]),write('|'),nl,	write('|'),
-        write([G,H,I]),write('|'),nl,nl.
+count(P,Count) :-
+findall(1,P,L),
+length(L,Count).
 
-main :- inicio, iniciar([a,a,a,a,a,a,a,a,a]).
+%% Registra as jogadas e retorna uma nova lista
+fazer_jogada([a,B,C,D,E,F,G,H,I], 1, Jogador, [Jogador,B,C,D,E,F,G,H,I]).
+fazer_jogada([A,a,C,D,E,F,G,H,I], 2, Jogador, [A,Jogador,C,D,E,F,G,H,I]).
+fazer_jogada([A,B,a,D,E,F,G,H,I], 3, Jogador, [A,B,Jogador,D,E,F,G,H,I]).
+fazer_jogada([A,B,C,a,E,F,G,H,I], 4, Jogador, [A,B,C,Jogador,E,F,G,H,I]).
+fazer_jogada([A,B,C,D,a,F,G,H,I], 5, Jogador, [A,B,C,D,Jogador,F,G,H,I]).
+fazer_jogada([A,B,C,D,E,a,G,H,I], 6, Jogador, [A,B,C,D,E,Jogador,G,H,I]).
+fazer_jogada([A,B,C,D,E,F,a,H,I], 7, Jogador, [A,B,C,D,E,F,Jogador,H,I]).
+fazer_jogada([A,B,C,D,E,F,G,a,I], 8, Jogador, [A,B,C,D,E,F,G,Jogador,I]).
+fazer_jogada([A,B,C,D,E,F,G,H,a], 9, Jogador, [A,B,C,D,E,F,G,H,Jogador]).
 
-inicio :-
-  write('Voce joga com x, digite a posicao que quer jogar.'),
-  nl,
-  disp([1,2,3,4,5,6,7,8,9]).
-
-iniciar(L) :- vitoria(L, x), write('Venceu!').
-iniciar(L) :- vitoria(L, o), write('Perdeu!').
-iniciar(L) :- not(member(a,L)), write('Empatou!').
-iniciar(L) :- read(N),
-  moverJ(L, N, NL),
-  disp(NL),
-  oplay(NL, NnL),
-  disp(NnL),
-  iniciar(NnL).
-
-venceJ(L) :- moverIA(L, x, NL), vitoria(NL, x).
-
-oplay(L,NL) :-
-  moverIA(L, o, NL),
+%% Procura melhor jogada pra IA
+oplay(L,X) :-
+  encontrar_jogada(L, X),
+  fazer_jogada(L, X, o, NL),
   vitoria(NL, o),!.
-oplay(L,NL) :-
-  moverIA(L, o, NL),
-  not(venceJ(NL)).
-oplay(L,NL) :-
-  moverIA(L, o, NL).
-oplay(L,NL) :-
-  not(member(a,L)),
-  NL = L.
+oplay(L,X) :-
+  encontrar_jogada(L, X),
+  fazer_jogada(L, X, o, NL),
+  vitoriaAntecipada(NL, o, x),
+  not(vitoriaAgora(NL, x)),
+  not(vitoriaAntecipada(NL, x, o)),!.
+oplay(L,X) :-
+  encontrar_jogada(L, X),
+  fazer_jogada(L, X, o, NL),
+  not(vitoriaAgora(NL, x)),
+  not(vitoriaAntecipada(NL, x, o)),!.
+
+%% Retorna falso se naoh eh possivel vitoria da IA
+empate(L) :- encontrar_jogada(L, X), fazer_jogada(L, X, x, NL),
+             not(vitoria(NL, x);vitoriaAgora(NL, x)),
+             not(vitoriaAgora(NL, o)),!.
